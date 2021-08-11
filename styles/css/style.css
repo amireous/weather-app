@@ -1,3 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+html {
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #2d3436;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .weather_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  background-color: #2d3436;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4), -3px -3px 4px #5a5a5a;
+  border-radius: 25px;
+  padding: 1rem 5rem;
+}
+.container .weather_container > * {
+  margin: 1rem 0;
+}
+.container h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.container h2 .fa {
+  font-size: 1.7rem;
+  margin: 0 0.5rem;
+}
+.container .weather-status {
+  font-size: 0.768rem;
+}
+.container .weather-temprature {
+  font-size: 3rem;
+}
 
 /*# sourceMappingURL=style.css.map */
