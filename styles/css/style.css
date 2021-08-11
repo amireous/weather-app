@@ -27,14 +27,20 @@ html {
   background-color: #2d3436;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4), -3px -3px 4px #5a5a5a;
   border-radius: 25px;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
 }
 .container .weather_container > * {
   margin: 1rem 0;
 }
 .container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
   font-weight: 500;
+}
+.container h2 p {
+  font-size: 2rem;
 }
 .container h2 .fa {
   font-size: 1.7rem;
@@ -45,6 +51,11 @@ html {
 }
 .container .weather-temprature {
   font-size: 3rem;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
