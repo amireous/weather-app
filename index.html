@@ -22,14 +22,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather_container">
-        <h2>
-          <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-          <p id="city">test</p>
-        </h2>
-        <p class="weather-status" id="weather-detail">test</p>
-        <p class="weather-temprature">23<sup>0</sup>C</p>
-        <div id="svg-img"></div>
+      <div class="app-container">
+        <select class="options-selector" id="options">
+          <option value="default" hidden>-- city</option>
+          <option value="1" id="milan">Milan</option>
+          <option value="2" id="tehran">Tehran</option>
+          <option value="3" id="paris">Paris</option>
+          <option value="4" id="tabriz">Tabriz</option>
+          <option value="5" id="brussels">Brussels</option>
+        </select>
+        <div class="weather_container">
+          <h2>
+            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+            <p id="city">choose a city</p>
+          </h2>
+          <p class="weather-status" id="weather-detail">unset</p>
+          <div class="weather-temprature">
+            <p id="weather-temp">
+              <span id="temp-number">0</span><sup>0</sup>C
+            </p>
+          </div>
+          <img src="#" alt="svg" id="svg-img" style="opacity: 0" />
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
