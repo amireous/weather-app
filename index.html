@@ -24,17 +24,17 @@
     <div class="container">
       <div class="app-container">
         <select class="options-selector" id="options">
-          <option value="default" hidden>-- city</option>
-          <option value="1" id="milan">Milan</option>
-          <option value="2" id="tehran">Tehran</option>
-          <option value="3" id="paris">Paris</option>
-          <option value="4" id="tabriz">Tabriz</option>
-          <option value="5" id="brussels">Brussels</option>
+          <option value="default" hidden>-- City</option>
+          <option value="1" id="tehran">Tehran</option>
+          <option value="2" id="paris">Paris</option>
+          <option value="3" id="ahvaz">Ahvaz</option>
+          <option value="4" id="brussels">Brussels</option>
+          <option value="5" id="alaska">Alaska</option>
         </select>
         <div class="weather_container">
           <h2>
             <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
-            <p id="city">choose a city</p>
+            <p id="city-name">choose a city</p>
           </h2>
           <p class="weather-status" id="weather-detail">unset</p>
           <div class="weather-temprature">
@@ -43,9 +43,13 @@
             </p>
           </div>
           <img src="#" alt="svg" id="svg-img" style="opacity: 0" />
+          <div class="loading">
+            <div class="loader"></div>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

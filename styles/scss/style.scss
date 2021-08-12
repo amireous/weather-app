@@ -23,15 +23,17 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  .app-container {
+    max-width: $pexels400;
+    width: 100%;
+  }
   select,
   option {
     font-family: "Poppins", sans-serif;
   }
   .options-selector {
     width: 100%;
-    padding: $padding1 $padding5 + 1;
-    text-align: center;
+    padding: $padding1 2rem;
     font-size: $fontSize2 - 0.5;
     color: $primaryWhite;
     border-radius: 10px;
@@ -39,24 +41,28 @@ html {
     border: none;
     margin: $margin2 0;
     outline: none;
+    text-align-last: center;
+    text-align: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
     @include PrimaryBoxShadow();
   }
 
   .weather_container {
+    width: 100%;
+    height: $pexels400;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 400px;
     background-color: $backgroundColor;
     border-radius: 25px;
-    padding: $padding1 $padding5 - $padding1;
+    padding: $padding1 0;
     @include PrimaryBoxShadow();
+    position: relative;
+    transition: 0.3s all;
   }
 
-  .fa {
-    display: none;
-  }
   h2 {
     display: flex;
     justify-content: center;
@@ -64,14 +70,15 @@ html {
     font-size: $fontSize2;
     font-weight: 500;
 
-    p {
+    .city-name {
       font-size: $fontSize2;
-      padding: 1rem 0;
+      padding: $padding1 0;
     }
 
     .fa {
       font-size: ($fontSize2 - 0.3);
       margin: 0 $margin1 - 0.5;
+      display: none;
     }
   }
 
@@ -82,8 +89,50 @@ html {
   .weather-temprature {
     font-size: $fontSize3;
   }
+
+  #svg-img {
+    width: 128px;
+  }
+
+  .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000a3;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.3s all;
+
+    .loader {
+      width: 55px;
+      height: 55px;
+      border: 5px solid $primaryWhite;
+      border-bottom-color: $primaryBlue;
+      border-radius: 50%;
+      animation: rotatie 1s linear infinite;
+    }
+  }
 }
 
-img {
-  width: 128px;
+@media screen and (max-width: 428px) {
+  .app-container {
+    width: 100%;
+    padding: 0 $padding3 - 1;
+
+    h2 p {
+      font-size: $fontSize2 - 0.2;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

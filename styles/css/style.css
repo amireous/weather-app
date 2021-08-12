@@ -18,14 +18,17 @@ html {
   justify-content: center;
   align-items: center;
 }
+.container .app-container {
+  max-width: 400px;
+  width: 100%;
+}
 .container select,
 .container option {
   font-family: "Poppins", sans-serif;
 }
 .container .options-selector {
   width: 100%;
-  padding: 1rem 6rem;
-  text-align: center;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   color: #fff;
   border-radius: 10px;
@@ -33,21 +36,25 @@ html {
   border: none;
   margin: 2rem 0;
   outline: none;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
   box-shadow: 3px 3px 4px #00000063, -3px -3px 5px #f5f5f57a;
 }
 .container .weather_container {
+  width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 400px;
   background-color: #3d3d3d;
   border-radius: 25px;
-  padding: 1rem 4rem;
+  padding: 1rem 0;
   box-shadow: 3px 3px 4px #00000063, -3px -3px 5px #f5f5f57a;
-}
-.container .fa {
-  display: none;
+  position: relative;
+  transition: 0.3s all;
 }
 .container h2 {
   display: flex;
@@ -56,13 +63,14 @@ html {
   font-size: 2rem;
   font-weight: 500;
 }
-.container h2 p {
+.container h2 .city-name {
   font-size: 2rem;
   padding: 1rem 0;
 }
 .container h2 .fa {
   font-size: 1.7rem;
   margin: 0 0.5rem;
+  display: none;
 }
 .container .weather-status {
   font-size: 0.768rem;
@@ -70,9 +78,46 @@ html {
 .container .weather-temprature {
   font-size: 3rem;
 }
-
-img {
+.container #svg-img {
   width: 128px;
+}
+.container .loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000a3;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.3s all;
+}
+.container .loading .loader {
+  width: 55px;
+  height: 55px;
+  border: 5px solid #fff;
+  border-bottom-color: #0077ff;
+  border-radius: 50%;
+  animation: rotatie 1s linear infinite;
+}
+
+@media screen and (max-width: 428px) {
+  .app-container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .app-container h2 p {
+    font-size: 1.8rem;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
